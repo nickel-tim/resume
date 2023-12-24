@@ -1,0 +1,40 @@
+
+
+.project-image {
+width: 100%;
+max-width: 100%;
+overflow: hidden;
+margin: 0 auto;
+display: block;
+}
+
+
+.project-video {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    display: block;
+    }
+
+
+.project-header-name {
+    @include sans;
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: -.15rem;
+    line-height: 1;
+    margin: 1rem 0 0;
+
+    a {
+        color: #333;
+        text-decoration: none;
+        border-bottom: 1px solid;
+  
+        &:hover {
+          border-bottom: none;
+          color: #9c9c9c;
+        }
+      }
+    }

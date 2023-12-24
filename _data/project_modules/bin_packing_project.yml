@@ -1,0 +1,17 @@
+title: 3D Modelfree Freeform Bin Packing
+
+chapters:
+
+  - header: Rapid dense packing for arbitrary objects
+    description: > 
+      Visualization for packing planning of arbitrary objects in dense configurations.
+      Object placements are calculated in 24 different orientations combining to <30 ms.
+      Overall packing grid precision can be tuned arbitrarily, visualization shows placements with resolution of 1 mm.
+  
+  - video_name: spec-pack
+    
+  - description: ABCDEF
+  
+  - header: ABC
+    description: ABCDEF
+  

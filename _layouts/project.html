@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include head.html %}
+
+
+
+    <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %}">
+
+        <div class="wrapper" itemscope itemtype="http://schema.org/Person">
+          <meta itemprop="telephone" content="{{ site.resume_contact_telephone }}"/>
+          <meta itemprop="address" content="{{ site.resume_contact_address }}"/>
+    
+          <header class="page-header">
+    
+            <!-- You can turn off the avatar in _config.yml by setting to false -->
+            {% if site.resume_avatar == 'true' %}
+            <img src="images/avatar.jpg" alt="my photo" class="avatar no-print" itemprop="image">
+            {% endif %}
+    
+            <!-- Your name is defined in the _config.yml file -->
+            <h1 class="project-header-name" itemprop="name">
+                <a href="{{ site.baseurl }}/">{{ site.resume_name }}</a>
+            </h1>
+            <!-- To display contact info here, change `display_header_contact_info` value in _config.yml to true -->
+            {% if site.display_header_contact_info == 'true' %}
+            <div class="header-contact-info">
+              <p>{{ site.resume_header_contact_info }}</p>
+            </div>
+            {% endif %}
+
+            <div class="title-bar no-print">
+
+                <!-- Your title is also defined in the _config.yml file -->
+                <h2 class="header-title" itemprop="jobTitle">{{ site.data.project_modules.[page.project_title].title }}</h2>
+      
+                <!-- This is the markup for the icon links; moved out to an include because it's very verbose, and you shouldn't ever need to edit the markup (unless you want to re-order the icons); if you want to customize which links appear, define them in the _config.yml file -->
+                <ul class="icon-links">
+                    <!-- LinkedIn link -->
+                    {% if site.resume_social_links.resume_linkedin_url %}
+                    <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_linkedin_url }}" class="icon-link" itemprop="sameAs">{% include icons/icon-linkedin.html %}</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+          </header>
+
+
+
+
+
+          <section class="content-section">
+            {% for chapter in site.data.project_modules[page.project_title]chapters %}
+              
+            <h3>{{ chapter.header }}</h3>
+              <p class="resume-item-copy">{{ chapter.description }}</p>
+              {% if chapter.image_name  %}
+              <img src="images/{{ chapter.image_name }}.jpg" alt="my photo" class="project-image no-print" itemprop="image">
+              {% endif %}
+              {% if chapter.video_name  %}
+
+
+              <video class="project-video"  autoplay muted loop>
+                <!-- Add multiple video sources for compatibility -->
+                <source src="videos/{{ chapter.video_name }}.mp4" type="video/mp4">
+                <source src="videos/{{ chapter.video_name }}.webm" type="video/webm">
+                <source src="videos/{{ chapter.video_name }}.ogv" type="video/ogg">
+                Your browser does not support the video tag.
+              </video>
+              {% endif %}
+            {% endfor %}
+          </section>
+
+
+
+
+
+        </div>
+    </body>
+</html>
