@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    ports: 
+      - 4000:4000
+
+    volumes:
+      - $PWD:/home/app
+    network_mode: host
