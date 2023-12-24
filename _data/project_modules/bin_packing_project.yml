@@ -10,8 +10,8 @@ chapters:
   
   - video_name: spec-pack
     
-  - description: ABCDEF
+  # - description: ABCDEF
   
-  - header: ABC
-    description: ABCDEF
+  # - header: ABC
+  #   description: ABCDEF
   
