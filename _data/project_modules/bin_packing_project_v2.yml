@@ -1,0 +1,13 @@
+title: 3D Modelfree Freeform Bin Packing V2
+
+chapters:
+
+  - header: Rapid dense packing for arbitrary objects
+  - description: > 
+      In this project I extended on state of the art algorithms from the area of 3D printing, to be applicable to the robotic item handling domain. 
+      The visualization below shows the packing planning for arbitrary objects in a dense and stable, robot reachable configuration.
+      Object placements are calculated in 24 different orientations combining to <30 ms.
+      Overall packing grid precision can be tuned arbitrarily, visualization shows placements with resolution of 1 mm.
+  
+  - video_name: spec-pack
+    

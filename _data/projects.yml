@@ -1,16 +1,16 @@
 # Projects
 # uncomment the urls if you wish to display them, and add your own URL
 
-# jazznotes.io
-- project: Modelfree 3D Freeform Bin Packing
+- project: Modelfree 3D Freeform Bin Packing V2
   role: Primary Developer
-  duration: 2021 &mdash; Present
-  url: "bin_packing_project"
+  duration: 2022 &mdash; Present
+  url: "bin_packing_project_v2"
   description: Algorithmic solution for the robotic bin packing problem of arbitrary unknown objects.
 
-# Springfield Community Outreach Group
-# - project: Springfield Community Outreach Group
-#   role: Co-Founder & Organizer
-#   duration: 2007 &mdash; Present
-#   # url: "#"
-#   description: SCOG is a local monthly meetup in Springfield where we share opportunities to volunteer in the community and organize support for families and neighborhoods in need of assistance that the community can provide.
+
+- project: Incremental learning for 3D object recognition based on generic deep RGB-D representations
+  role: Primary Developer
+  duration: 2020 &mdash; 2021
+  url: "incremental_learning_project"
+  description: Incremental learning of 3D objects based on generic latent representations.
+

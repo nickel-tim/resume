@@ -49,15 +49,14 @@
 
           <section class="content-section">
             {% for chapter in site.data.project_modules[page.project_title]chapters %}
-              
+            {% if chapter.header  %}
             <h3>{{ chapter.header }}</h3>
+            {% endif %}
               <p class="resume-item-copy">{{ chapter.description }}</p>
               {% if chapter.image_name  %}
-              <img src="images/{{ chapter.image_name }}.jpg" alt="my photo" class="project-image no-print" itemprop="image">
+              <img src="images/{{ chapter.image_name }}" alt="my photo" class="project-image no-print" itemprop="image">
               {% endif %}
               {% if chapter.video_name  %}
-
-
               <video class="project-video"  autoplay muted loop>
                 <!-- Add multiple video sources for compatibility -->
                 <source src="videos/{{ chapter.video_name }}.mp4" type="video/mp4">
@@ -66,6 +65,7 @@
                 Your browser does not support the video tag.
               </video>
               {% endif %}
+
             {% endfor %}
           </section>
 

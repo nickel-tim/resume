@@ -1,0 +1,34 @@
+title: Incremental learning for 3D object recognition based on generic deep RGB-D representations
+chapters:
+
+  - header: Using variational autoencoders (VAE) to perform few shot object categorization on 3D pointclouds
+  
+  - description: > 
+      In this project I developed a system that was capable of performing object categorization for 3D pointclouds.
+      I used Variational autoencoders (VAE) to encode the 3D pointcloud into a deep latent representation. 
+      The VAE was trained on the reconstruction loss of the decoder network to force the geometric shape of the object into the latent encodings.
+
+      After the initial training, the encodings of different objects from the same class will form clusters within the latent space.
+      These clusters can then be leveraged for classification of new objects.
+
+  
+  - image_name: VAE_model.svg
+    
+  - description: > 
+      The spacial relationship in the latent space can then be leverage to create clusters of objects of the same class and also clusters of object classes with a certain degree of similarity.
+      The image below shows that embeddings of object classes that are geometrically alike tend to fall into closer proximity of each other within the latent space.
+
+  
+  - image_name: latent_similarity.png
+
+  - description: > 
+      The similarity of the object classes can then be used to form greater clusters that generally fit a group of object classes like vehicles (bottom right) or crockery (middle left).
+      In the image below the red classes have only been introduced by a limited number of examples after training with the networks weights frozen. This shows that the generalization can work across new unseen object classes.
+
+  - image_name: incremental_learning_latent_space_example.png
+
+  # - description: ABCDEF
+  
+  # - header: ABC
+  #   description: ABCDEF
+  
